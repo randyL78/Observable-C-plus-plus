@@ -1,0 +1,5 @@
+main.o: main.cpp WeatherData.h Observable.h ForecastDisplay.h Observer.h
+ForecastDisplay.o: ForecastDisplay.cpp ForecastDisplay.h Observer.h \
+  WeatherData.h Observable.h
+Observable.o: Observable.cpp Observable.h Observer.h
+WeatherData.o: WeatherData.cpp WeatherData.h Observable.h
