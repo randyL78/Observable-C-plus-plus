@@ -3,9 +3,9 @@
 #include "ForecastDisplay.h"
 
 int main() {
-    WeatherData weatherData = WeatherData(23, 0.80, .04);
-    ForecastDisplay forecastDisplay = ForecastDisplay(weatherData);
-    ForecastDisplay forecastDisplay1 = ForecastDisplay(weatherData);
+    WeatherData weatherData(23, 0.80, .04);
+    ForecastDisplay forecastDisplay(weatherData);
+    ForecastDisplay forecastDisplay1(weatherData);
 
     weatherData.setMeasurements(80, 65, 30.4);
     weatherData.setMeasurements(82, 70, 29.2);

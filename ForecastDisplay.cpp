@@ -3,8 +3,9 @@
 //
 #include "ForecastDisplay.h"
 
-ForecastDisplay::ForecastDisplay(WeatherData weatherData) {
-    this->weatherData = weatherData;
+ForecastDisplay::ForecastDisplay(WeatherData& weatherData)
+    :weatherData(weatherData)
+{
     this->weatherData.addObserver(this);
 }
 

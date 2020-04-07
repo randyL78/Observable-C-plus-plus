@@ -15,10 +15,10 @@ class ForecastDisplay :Observer {
 private:
     float currentPressure;
     float lastPressure;
-    WeatherData weatherData;
+    WeatherData& weatherData;
 
 public:
-    ForecastDisplay(WeatherData weatherData);
+    ForecastDisplay(WeatherData& weatherData);
 
     // Override Observer methods
     virtual void notify(Observable *changedObject);
