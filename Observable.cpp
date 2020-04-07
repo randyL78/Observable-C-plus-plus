@@ -12,9 +12,7 @@
 // it calls notifyObservers() and each registered observer will be notified.
 
 void Observable::addObserver(Observer *observer) {
-    std::cout << "Observer added. ";
     observers.push_back(*observer);
-    std::cout << "Number of Observers: " << observers.size() << "\n";
 }
 
 //void Observable::removeObserver(Observer *observer) {
@@ -24,10 +22,11 @@ void Observable::addObserver(Observer *observer) {
 //}
 
 void Observable::notifyObservers() {
-    std::cout << "Number of Observers: " << observers.size() << "\n";
     for (Observer& observer : observers) {
-        observer.notify(this);
+        observer.notify();
     }
 }
+
+
 
 

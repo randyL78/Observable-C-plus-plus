@@ -16,7 +16,6 @@ WeatherData::WeatherData(float temperature, float humidity, float pressure)
 
 
 void WeatherData::measurementsChanged() {
-    std::cout << "Change detected. ";
     notifyObservers();
 }
 

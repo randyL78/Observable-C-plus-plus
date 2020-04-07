@@ -4,12 +4,12 @@
 #include "ForecastDisplay.h"
 
 ForecastDisplay::ForecastDisplay(WeatherData& weatherData)
-    :weatherData(weatherData)
+:weatherData(weatherData)
 {
     this->weatherData.addObserver(this);
 }
 
-void ForecastDisplay::notify(Observable *changedObject) {
+void ForecastDisplay::notify() {
     lastPressure = currentPressure;
     currentPressure = weatherData.getPressure();
     display(std::cout);

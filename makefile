@@ -11,7 +11,7 @@ LFLAGS=
 else
 DISTR=Unix
 EXE=
-# LFLAGS=-fsanitize=leak,address -fuse-ld=gold
+LFLAGS=-fsanitize=leak,address -fuse-ld=gold
 endif
 #
 ########################################################################

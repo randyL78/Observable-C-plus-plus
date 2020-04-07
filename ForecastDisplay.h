@@ -6,32 +6,26 @@
 #define OBSERVABLE_FORECASTDISPLAY_H
 
 #include "Observer.h"
-//#include "DisplayElement.h"
+#include "DisplayElement.h"
 #include "WeatherData.h"
 #include <iostream>
 
 
-class ForecastDisplay :Observer {
+class ForecastDisplay :Observer, DisplayElement {
 private:
     float currentPressure;
     float lastPressure;
     WeatherData& weatherData;
 
 public:
-    ForecastDisplay(WeatherData& weatherData);
+    explicit ForecastDisplay(WeatherData& weatherData);
 
     // Override Observer methods
-    virtual void notify(Observable *changedObject);
+    void notify() override;
 
     // Override DisplayElement methods
-    void display(std::ostream& outs) const;
+    void display(std::ostream& outs) const override;
 };
 
-inline
-std::ostream& operator<<(std::ostream& outs, const ForecastDisplay& prt)
-{
-    prt.display(outs);
-    return outs;
-}
 
 #endif //OBSERVABLE_FORECASTDISPLAY_H

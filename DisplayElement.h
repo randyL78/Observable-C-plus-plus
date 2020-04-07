@@ -10,14 +10,7 @@
 class DisplayElement
 {
 public:
-    virtual void display(std::ostream& outs) const;
+    virtual void display(std::ostream& outs) const = 0;
 };
-
-//inline
-//std::ostream& operator<<(std::ostream& outs, const DisplayElement& prt)
-//{
-//    prt.display(outs);
-//    return outs;
-//}
 
 #endif //OBSERVABLE_DISPLAYELEMENT_H

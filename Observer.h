@@ -18,7 +18,7 @@ class Observable; // stub observable to avoid having to include the real one.
 class Observer
 {
 public:
-    virtual void notify (Observable* changedObject) = 0;
+    virtual void notify() = 0;
 };
 
 #endif //OBSERVABLE_OBSERVER_H
